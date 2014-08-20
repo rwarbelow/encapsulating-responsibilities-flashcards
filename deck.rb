@@ -1,8 +1,6 @@
 # holds card objects in the same place initially
 # moves cards to a "used" pile as game progresses
 
-require_relative 'csv_handler'
-
 class Deck
 	attr_reader :used_cards, :new_cards
 	def initialize
@@ -15,13 +13,11 @@ class Deck
 	end
 
 	def has_unguessed_cards?
-		!new_cards.empty?
+		new_cards.any?
 	end
 
 	def select_random
 		card = new_cards.shuffle!.pop
-		move_to_used_deck(card)
-		card
 	end
 
 	def move_to_used_deck(card)
