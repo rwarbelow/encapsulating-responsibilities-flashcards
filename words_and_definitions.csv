@@ -1,0 +1,5 @@
+id,word,definition
+1,map,the numerable method that returns an array of mutated objects
+2,each_with_index,the enumerable method that iterates over an array with index number
+3,find,the enumerable method that returns the first instance where a condition is true
+4,each,the enumerable method that iterates over an array and returns the original array
